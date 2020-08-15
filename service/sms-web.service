@@ -1,0 +1,9 @@
+[Unit]				
+Description=sms.web				
+After=multi-user.target				
+[Service]				
+Type=simple				
+ExecStart=/usr/bin/sudo NODE_ENV=production /usr/bin/node /home/pi/Documents/pi-sms/js/index.js
+Restart=on-abort				
+[Install]				
+WantedBy=multi-user.target
