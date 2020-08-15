@@ -86,8 +86,8 @@ async function server() {
 
 server();
 
-app.get('/service', async (req, res) => {
-    const { name } = req.query
+app.get('/service/:name', async (req, res) => {
+    const { name } = req.params
     try {
         if (!name) return res.status(400).send('name of service')
 
