@@ -12,10 +12,10 @@ def getConfig():
 def req(values):
     try: 
         url = getConfig()['SERVER_URL'] + '/sms'
-
+        headers = { 'Authorization' : getConfig()['Authorization'] }
         data = urllib.parse.urlencode(values)
         data = data.encode('ascii') # data should be bytes
-        req = urllib.request.Request(url, data)
+        req = urllib.request.Request(url, data, headers)
         with urllib.request.urlopen(req) as response:
             res = response.read()
             return True
