@@ -4,4 +4,5 @@ copy all service file to directory /lib/systemd/system/
 ```
 sudo cp service/sms-web.service /lib/systemd/system/
 sudo cp service/sms-gammu.service /lib/systemd/system/
+sudo systemctl daemon-reload
 ```
