@@ -1,3 +1,9 @@
+### install gammu
+```
+sudo apt-get install gammu
+sudo apt-get install libgammu-dev
+```
+
 ### service file
 copy all service file to directory /lib/systemd/system/  
 **Note** only root permission for directory
